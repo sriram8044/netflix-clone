@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Sign In - Netflix Clone</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      height: 100vh;
+      font-family: Arial, sans-serif;
+      background: linear-gradient(to top, rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.3)),
+        url('signin-bg.jpg') no-repeat center center / cover;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+
+    .login-container {
+      background-color: rgba(0, 0, 0, 0.75);
+      padding: 60px 50px;
+      border-radius: 8px;
+      width: 320px;
+      color: #fff;
+    }
+
+    .login-container h2 {
+      margin-bottom: 25px;
+    }
+
+    .login-container input {
+      width: 100%;
+      padding: 12px;
+      margin: 10px 0;
+      background: #333;
+      border: none;
+      border-radius: 4px;
+      color: white;
+    }
+
+    .login-container button {
+      width: 100%;
+      padding: 12px;
+      margin-top: 15px;
+      background-color: #e50914;
+      border: none;
+      color: white;
+      font-weight: bold;
+      cursor: pointer;
+      border-radius: 4px;
+    }
+
+    .options {
+      display: flex;
+      justify-content: space-between;
+      font-size: 0.9rem;
+      margin-top: 10px;
+      color: #bbb;
+    }
+
+    .login-footer {
+      margin-top: 30px;
+      font-size: 0.85rem;
+      color: #bbb;
+    }
+
+    .login-footer a {
+      color: white;
+      text-decoration: none;
+      font-weight: bold;
+    }
+
+    .login-footer a:hover {
+      text-decoration: underline;
+    }
+  </style>
+</head>
+<body>
+
+  <div class="login-container">
+    <h2>Sign In</h2>
+    <input type="text" placeholder="Email or mobile number">
+    <input type="password" placeholder="Password">
+    <button>Sign In</button>
+
+    <div class="options">
+      <label><input type="checkbox" checked> Remember me</label>
+      <a href="#">Need help?</a>
+    </div>
+
+    <div class="login-footer">
+     <p>New to Netflix? <a href="signup.html">Sign up now</a>.</p>
+
+      <p>This page is protected by Google reCAPTCHA to ensure you're not a bot. <a href="#">Learn more.</a></p>
+    </div>
+  </div>
+
+</body>
+</html>

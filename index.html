@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Netflix Clone</title>
+  <link rel="stylesheet" href="style.css">
+  
+</head>
+<body>
+  <header class="navbar">
+  <img src="netflix-logo.png" alt="Netflix Logo" class="logo">
+
+    <nav>
+      <ul>
+        <li>Home</li>
+        <li>TV Shows</li>
+        <li>Movies</li>
+        <li>My List</li>
+      </ul>
+    </nav>
+   <a href="login.html"><button>Sign In</button></a>
+
+
+
+  </header>
+
+  <section class="hero">
+   <center>
+    <h1>Popular on Netflix</h1>
+    <p>Watch your favorite shows and movies anytime.</p>
+    
+    <img 
+   </center>
+  </section>
+
+  <section class="row">
+    <h2>Trending Now</h2>
+    <div class="row-posters">
+     <img class="poster" src="movie1.jpg" alt="Movie 1">
+    
+<img class="poster" src="movie2.jpg" alt="Movie 2">
+<img class="poster" src="movie3.jpg" alt="Movie 3">
+
+<img class="poster" src="movie5.jpg" alt="Movie 5">
+      <!-- more posters -->
+       
+      
+    </div>
+    
+    
+  </section>
+    
+
+  <script src="script.js"></script>
+ 
+<script>
+  document.addEventListener("DOMContentLoaded", () => {
+    const signInBtn = document.getElementById("signInBtn");
+
+    signInBtn.addEventListener("click", (e) => {
+      e.preventDefault(); // ✅ Stop form from refreshing
+
+      const enteredEmail = document.querySelector('input[type="text"], input[type="email"]').value;
+      const enteredPassword = document.querySelector('input[type="password"]').value;
+
+      const savedEmail = localStorage.getItem("userEmail");
+      const savedPassword = localStorage.getItem("userPassword");
+
+      if (enteredEmail === savedEmail && enteredPassword === savedPassword) {
+        alert("Login successful!");
+        window.location.href = "index.html";
+      } else {
+        alert("Incorrect email or password.");
+      }
+    });
+  });
+</script>
+
+</body>
+</html>

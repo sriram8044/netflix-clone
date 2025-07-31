@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Sign Up - Netflix Clone</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <style>
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+      height: 100vh;
+      background: linear-gradient(to top, rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.3)),
+        url('signin-bg.jpg') no-repeat center center / cover;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      color: white;
+    }
+
+    .signup-container {
+      background-color: rgba(0, 0, 0, 0.75);
+      padding: 40px 30px;
+      border-radius: 8px;
+      width: 350px;
+    }
+
+    .signup-container h2 {
+      margin-bottom: 25px;
+      text-align: center;
+    }
+
+    .signup-container input {
+      width: 100%;
+      padding: 12px;
+      margin: 10px 0;
+      background: #333;
+      border: none;
+      border-radius: 4px;
+      color: white;
+    }
+
+    .signup-container button {
+      width: 100%;
+      padding: 12px;
+      margin-top: 15px;
+      background-color: #e50914;
+      border: none;
+      color: white;
+      font-weight: bold;
+      cursor: pointer;
+      border-radius: 4px;
+    }
+
+    .signup-container button:hover {
+      background-color: #f40612;
+    }
+
+    .signup-footer {
+      text-align: center;
+      margin-top: 15px;
+      font-size: 0.9rem;
+    }
+
+    .signup-footer a {
+      color: white;
+      text-decoration: underline;
+    }
+  </style>
+  
+</head>
+
+<body>
+
+  <div class="signup-container">
+    <h2>Create Your Account</h2>
+    <input type="text" id="name" placeholder="Full Name">
+    <input type="email" id="email" placeholder="Email Address">
+    <input type="password" id="password" placeholder="Password">
+    <button onclick="createAccount()">Sign Up</button>
+
+    <div class="signup-footer">
+      <p>Already have an account? <a href="login.html">Sign In</a></p>
+    </div>
+  </div>
+
+  <script>
+    function createAccount() {
+      const name = document.getElementById("name").value;
+      const email = document.getElementById("email").value;
+      const password = document.getElementById("password").value;
+
+      if (name && email && password) {
+        // Simulate storing user data
+        localStorage.setItem("userEmail", email);
+        localStorage.setItem("userPassword", password);
+        alert("Account created! Redirecting to login...");
+        window.location.href = "index.html";
+
+      } else {
+        alert("Please fill in all fields.");
+      }
+    }
+  </script>
+ 
+</body>
+</html>

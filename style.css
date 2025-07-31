@@ -1,0 +1,64 @@
+body {
+  margin: 0;
+  background-color: #111;
+  color: #fff;
+  font-family: Arial, sans-serif;
+}
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  padding: 10px 20px;
+  background-color: #000;
+}
+.logo {
+  width: 100px;
+}
+nav ul {
+  display: flex;
+  gap: 20px;
+  list-style: none;
+}
+.hero {
+  padding: 40px;
+  background-image: url('images/hero-bg.jpg');
+  background-size: cover;
+  background-position: center;
+  
+}
+.hero h1 {
+  font-size: 3rem;
+}
+button {
+  margin: 10px;
+  padding: 10px 20px;
+  background: red;
+  color: white;
+  border: none;
+  cursor: pointer;
+}
+.row {
+  padding: 20px;
+}
+.row-posters {
+  display: flex;
+  overflow-x: scroll;
+}
+.poster {
+  width: 150px;
+  margin-right: 10px;
+  transition: transform 0.3s;
+}
+.poster:hover {
+  transform: scale(1.1);
+}
+@media (max-width: 600px) {
+  .hero h1 { font-size: 2rem; }
+  .poster { width: 100px; }
+}
+body {
+  margin: 0;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background: linear-gradient(to top, rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.2)),
+              url('signin-bg.jpg') no-repeat center center / cover;
+  color: white;
+}
